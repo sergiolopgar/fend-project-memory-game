@@ -2,6 +2,10 @@
  * Create a list that holds all of your cards
  */
 
+let card = $(".card");
+let cards = [...card];
+
+
 
 /*
  * Display the cards on the page
