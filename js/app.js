@@ -2,8 +2,20 @@
  * Create a list that holds all of your cards
  */
 
+
 let card = $(".card");
+
 let cards = [...card];
+
+let deck = $(".deck");
+
+let plays = 0;
+
+let playsCounter = $(".moves");
+
+let stars = $(".fa-star");
+
+$(document).ready(gameOn());
 
 
 
@@ -28,6 +40,33 @@ function shuffle(array) {
 
     return array;
 }
+
+
+
+function gameOn(){
+
+  cards = $(shuffle(cards));
+
+  deck.html("");
+
+  cards.each(function(){
+    deck.append(this);
+    $(this).removeClass("show open match disabled");
+  });
+
+  plays = 0;
+
+  playsCounter.html(plays);
+
+  stars.each(function(){
+    $(this).css({
+      "color" : "#faff00",
+      "visibility" : "visible"
+      });
+    });
+};
+
+
 
 
 /*
