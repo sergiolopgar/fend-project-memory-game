@@ -15,6 +15,14 @@ let playsCounter = $(".moves");
 
 let stars = $(".fa-star");
 
+let seconds, minutes, hours = 0;
+let timer = $(".timer");
+timer.html("0mins 0secs");
+var interval;
+
+
+
+
 $(document).ready(gameOn());
 
 
@@ -64,7 +72,29 @@ function gameOn(){
       "visibility" : "visible"
       });
     });
+
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+  clearInterval(interval);
+
 };
+
+
+function timerOn(){
+    interval = setInterval(function(){
+        timer.html(minutes+"mins "+seconds+"secs") ;
+        seconds++;
+        if(seconds == 60){
+            minutes++;
+            seconds=0;
+        }
+        if(minutes == 60){
+            hours++;
+            minutes = 0;
+        }
+    },1000);
+}
 
 
 
