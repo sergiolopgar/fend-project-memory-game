@@ -11,7 +11,7 @@ let deck = $(".deck");
 
 let plays = 0;
 
-let playsCounter = $(".moves");
+let counter = $(".moves");
 
 let stars = $(".fa-star");
 
@@ -20,6 +20,7 @@ let timer = $(".timer");
 timer.html("0mins 0secs");
 var interval;
 
+let cardsPicked = [];
 
 
 
@@ -64,7 +65,7 @@ function gameOn(){
 
   plays = 0;
 
-  playsCounter.html(plays);
+  counter.html(plays);
 
   stars.each(function(){
     $(this).css({
@@ -100,9 +101,23 @@ let showCard = function(){
   $(this).toggleClass("open show disabled");
 }
 
+function openCard (){
+  cardsPicked.push(this);
+  let long = cardsPicked.length;
+  if (long === 2){
+    playsCounter();
+  }
+}
+
+function playsCounter(){
+  plays++;
+  counter.html(plays)
+}
+
 
 cards.each(function(){
   $(this).click(showCard);
+  $(this).click(openCard);
 
 })
 
