@@ -78,7 +78,7 @@ function gameOn(){
   hours = 0;
   clearInterval(interval);
 
-};
+}
 
 
 function timerOn(){
@@ -96,8 +96,15 @@ function timerOn(){
     },1000);
 }
 
+let showCard = function(){
+  $(this).toggleClass("open show disabled");
+}
 
 
+cards.each(function(){
+  $(this).click(showCard);
+
+})
 
 /*
  * set up the event listener for a card. If a card is clicked:
