@@ -125,10 +125,13 @@ function openCard(){
 function playsCounter(){
   plays++;
   counter.html(plays)
-  /*if (plays == 1){
-    timerOn();
-  };*/
 
+  if (plays > 9 && plays <= 13){
+        $(".fa-star:last").css("visibility", "collapse");
+
+  } else if (plays > 13){
+        $(".middle").css("visibility", "collapse");
+    }
 
 }
 
@@ -147,7 +150,7 @@ function unmatchCards(){
     $(cardsPicked[0]).removeClass("show open no-event unmatch");
     $(cardsPicked[1]).removeClass("show open no-event unmatch");
     cardsPicked = [];
-  }, 1000);
+  }, 750);
 }
 
 cards.each(function(){
