@@ -17,12 +17,12 @@ let stars = $(".fa-star");
 
 let matchedCards = [];
 
-let seconds, minutes, hours = 0;
+let seconds, minutes = 0;
 let timer = $(".timer");
 timer.html("0mins 0secs");
 var interval;
 
-let cardsPicked = [];
+let pickedCards = [];
 
 let clicks = [];
 
@@ -80,7 +80,6 @@ function gameOn(){
 
   seconds = 0;
   minutes = 0;
-  hours = 0;
   timer.html("0mins 0secs")
   clearInterval(interval);
 
@@ -95,10 +94,6 @@ function timerOn(){
             minutes++;
             seconds=0;
         }
-        if(minutes == 60){
-            hours++;
-            minutes = 0;
-        }
     },1000);
 }
 
@@ -108,14 +103,14 @@ let showCard = function(){
 
 function openCard(){
   clicks.push(this);
-  cardsPicked.push(this);
-  let long = cardsPicked.length;
+  pickedCards.push(this);
+  let long = pickedCards.length;
   if (clicks.length === 1){
     timerOn();
 }
   if (long === 2){
     playsCounter();
-    if (cardsPicked[0].type === cardsPicked[1].type){
+    if (pickedCards[0].type === pickedCards[1].type){
       matchCards();
     } else {
       unmatchCards();
@@ -137,20 +132,20 @@ function playsCounter(){
 }
 
 function matchCards(){
-  $(cardsPicked[0]).removeClass("show open no-event").addClass("match disabled");
-  $(cardsPicked[1]).removeClass("show open no-event").addClass("match disabled");
-  matchedCards.push(cardsPicked[0]);
-  matchedCards.push(cardsPicked[1]);
-  cardsPicked = [];
+  $(pickedCards[0]).removeClass("show open no-event").addClass("match disabled");
+  $(pickedCards[1]).removeClass("show open no-event").addClass("match disabled");
+  matchedCards.push(pickedCards[0]);
+  matchedCards.push(pickedCards[1]);
+  pickedCards = [];
 }
 
 function unmatchCards(){
-  $(cardsPicked[0]).addClass("unmatch");
-  $(cardsPicked[1]).addClass("unmatch");
+  $(pickedCards[0]).addClass("unmatch");
+  $(pickedCards[1]).addClass("unmatch");
   setTimeout(function(){
-    $(cardsPicked[0]).removeClass("show open no-event unmatch");
-    $(cardsPicked[1]).removeClass("show open no-event unmatch");
-    cardsPicked = [];
+    $(pickedCards[0]).removeClass("show open no-event unmatch");
+    $(pickedCards[1]).removeClass("show open no-event unmatch");
+    pickedCards = [];
   }, 750);
 }
 
