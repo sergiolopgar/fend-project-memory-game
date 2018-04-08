@@ -24,6 +24,8 @@ var interval;
 
 let cardsPicked = [];
 
+let clicks = [];
+
 
 
 $(document).ready(gameOn());
@@ -104,8 +106,12 @@ let showCard = function(){
 }
 
 function openCard(){
+  clicks.push(this);
   cardsPicked.push(this);
   let long = cardsPicked.length;
+  if (clicks.length === 1){
+    timerOn();
+}
   if (long === 2){
     playsCounter();
     if (cardsPicked[0].type === cardsPicked[1].type){
@@ -119,6 +125,11 @@ function openCard(){
 function playsCounter(){
   plays++;
   counter.html(plays)
+  /*if (plays == 1){
+    timerOn();
+  };*/
+
+
 }
 
 function matchCards(){
