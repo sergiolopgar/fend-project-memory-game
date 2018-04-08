@@ -153,9 +153,17 @@ function unmatchCards(){
   }, 750);
 }
 
+function gameOver(){
+  if (matchedCards.length === 16){
+    $(".modal").css("display", "block");
+  }
+
+}
+
 cards.each(function(){
   $(this).click(showCard);
   $(this).click(openCard);
+  $(this).click(gameOver);
 
 })
 
