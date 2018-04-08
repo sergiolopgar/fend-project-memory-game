@@ -15,7 +15,7 @@ let counter = $(".moves");
 
 let stars = $(".fa-star");
 
-let matched = $(".match");
+let matchedCards = [];
 
 let seconds, minutes, hours = 0;
 let timer = $(".timer");
@@ -124,6 +124,8 @@ function playsCounter(){
 function matchCards(){
   $(cardsPicked[0]).removeClass("show open no-event").addClass("match disabled");
   $(cardsPicked[1]).removeClass("show open no-event").addClass("match disabled");
+  matchedCards.push(cardsPicked[0]);
+  matchedCards.push(cardsPicked[1]);
   cardsPicked = [];
 }
 
@@ -135,10 +137,7 @@ function unmatchCards(){
     $(cardsPicked[1]).removeClass("show open no-event unmatch");
     cardsPicked = [];
   }, 1000);
-
-
 }
-
 
 cards.each(function(){
   $(this).click(showCard);
