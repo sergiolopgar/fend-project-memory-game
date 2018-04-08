@@ -155,7 +155,22 @@ function unmatchCards(){
 
 function gameOver(){
   if (matchedCards.length === 16){
+    clearInterval(interval);
+    let timeMade = timer.html();
+    let scoreMade = $(".stars").html();
     $(".modal").css("display", "block");
+
+    if ($(".fa-star:last").css("visibility") === "collapse" && $(".middle").css("visibility") === "collapse" ){
+      $(".message").html("You did it, but I guess you can do it better than that.");
+    } else if ($(".fa-star:last").css("visibility") === "collapse"){
+        $(".message").html("Well done!!! Do you dare to go for a perfect score?");
+    } else {
+        $(".message").html("Amazing. You've rated the highest score");
+    }
+
+    $(".playsMade").html(plays);
+    $(".timeMade").html(timeMade);
+    $(".scoreMade").html(scoreMade);
   }
 
 }
