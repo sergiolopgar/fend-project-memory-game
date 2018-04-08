@@ -98,16 +98,19 @@ function timerOn(){
 }
 
 let showCard = function(){
+  clicks.push(this);
+  if (clicks.length === 1){
+    timerOn();
+ }
+
   $(this).toggleClass("open show disabled");
 }
 
 function openCard(){
-  clicks.push(this);
+
   pickedCards.push(this);
   let long = pickedCards.length;
-  if (clicks.length === 1){
-    timerOn();
-}
+
   if (long === 2){
     playsCounter();
     if (pickedCards[0].type === pickedCards[1].type){
@@ -143,8 +146,8 @@ function unmatchCards(){
   $(pickedCards[0]).addClass("unmatch");
   $(pickedCards[1]).addClass("unmatch");
   setTimeout(function(){
-    $(pickedCards[0]).removeClass("show open no-event unmatch");
-    $(pickedCards[1]).removeClass("show open no-event unmatch");
+    $(pickedCards[0]).removeClass("show open disabled unmatch");
+    $(pickedCards[1]).removeClass("show open disabled unmatch");
     pickedCards = [];
   }, 750);
 }
