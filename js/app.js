@@ -182,6 +182,10 @@ function playAgain() {
 
 }
 
+$(".restart").click(function(){
+  location.reload();
+})
+
 cards.each(function(){
   $(this).click(showCard);
   $(this).click(openCard);
