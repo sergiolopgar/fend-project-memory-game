@@ -81,6 +81,7 @@ function gameOn(){
   seconds = 0;
   minutes = 0;
   hours = 0;
+  timer.html("0mins 0secs")
   clearInterval(interval);
 
 }
@@ -171,7 +172,18 @@ function gameOver(){
     $(".playsMade").html(plays);
     $(".timeMade").html(timeMade);
     $(".scoreMade").html(scoreMade);
-  }
+
+    playAgain();
+  };
+
+}
+
+function playAgain() {
+  $(".modalRestart").click(function(){
+    $(".modal").css("display", "none");
+    matchedCards = [];
+    location.reload();
+  });
 
 }
 
