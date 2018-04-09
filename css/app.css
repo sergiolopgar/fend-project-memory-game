@@ -19,6 +19,7 @@ body {
 body {
     background: #ffffff url('../img/sativa.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
+    font-size: 1em;
 }
 
 .container {
