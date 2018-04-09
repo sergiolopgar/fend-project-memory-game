@@ -145,12 +145,30 @@ function matchCards(){
 function unmatchCards(){
   $(pickedCards[0]).addClass("unmatch");
   $(pickedCards[1]).addClass("unmatch");
+  disable();
   setTimeout(function(){
     $(pickedCards[0]).removeClass("show open disabled unmatch");
     $(pickedCards[1]).removeClass("show open disabled unmatch");
+    enable();
     pickedCards = [];
   }, 750);
 }
+
+function disable(){
+    Array.prototype.filter.call(cards, function(){
+        card.addClass("disabled");
+    });
+}
+
+function enable(){
+    Array.prototype.filter.call(cards, function(){
+        card.removeClass("disabled");
+        $(".match").each(function(){
+          $(this).addClass("disabled");
+        });
+      });
+  }
+
 
 function gameOver(){
   if (matchedCards.length === 16){
