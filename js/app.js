@@ -1,32 +1,25 @@
+// Cards variables
 let card = $(".card");
-
 let cards = [...card];
-
 let deck = $(".deck");
-
-let plays = 0;
-
-let counter = $(".moves");
-
-let stars = $(".fa-star");
-
+let pickedCards = [];
+let clicks = [];
 let matchedCards = [];
 
+// Plays variables
+let plays = 0;
+let counter = $(".moves");
+
+// Rating variable
+let stars = $(".fa-star");
+
+// Timer variables
 let seconds, minutes = 0;
-
 let timer = $(".timer");
-
 timer.html("0mins 0secs");
-
 var interval;
 
-let pickedCards = [];
-
-let clicks = [];
-
-
 $(document).ready(gameOn());
-
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -43,8 +36,7 @@ function shuffle(array) {
     return array;
 }
 
-
-
+// Function to start the game
 function gameOn() {
     cards = $(shuffle(cards));
 
@@ -56,7 +48,6 @@ function gameOn() {
       });
 
     plays = 0;
-
     counter.html(plays);
 
     stars.each(function() {
@@ -72,6 +63,7 @@ function gameOn() {
     clearInterval(interval);
 }
 
+// Function to start the timer
 function timerOn() {
     interval = setInterval(function() {
         timer.html(minutes+"mins "+seconds+"secs");
@@ -83,6 +75,7 @@ function timerOn() {
     },1000);
 }
 
+// Function to flip the cards and call timerOn to start timer
 let showCard = function() {
     clicks.push(this);
 
@@ -93,6 +86,7 @@ let showCard = function() {
     $(this).toggleClass("open show disabled");
 }
 
+// Function to determinate wether is a match or not
 function openCard() {
   pickedCards.push(this);
 
@@ -108,6 +102,7 @@ function openCard() {
   }
 }
 
+// Function to increase number of plays made and rate according to them
 function playsCounter() {
     plays++;
     counter.html(plays)
@@ -120,6 +115,7 @@ function playsCounter() {
       };
 }
 
+// Function to block cards when match
 function matchCards() {
     $(pickedCards[0]).removeClass("show open").addClass("match disabled");
     $(pickedCards[1]).removeClass("show open").addClass("match disabled");
@@ -128,6 +124,7 @@ function matchCards() {
     pickedCards = [];
 }
 
+// Function to flip over the cards unmatched after checked
 function unmatchCards() {
     $(pickedCards[0]).addClass("unmatch");
     $(pickedCards[1]).addClass("unmatch");
@@ -142,12 +139,14 @@ function unmatchCards() {
       }, 750);
 }
 
+// Function to avoid cards for flipping over
 function blockCard() {
     Array.prototype.filter.call(cards, function() {
         card.addClass("disabled");
     });
 }
 
+// Function to allow cards to flip over
 function unblockCard() {
     Array.prototype.filter.call(cards, function() {
         card.removeClass("disabled");
@@ -158,6 +157,7 @@ function unblockCard() {
       });
 }
 
+// Function to display congratulation modal
 function gameOver() {
     if (matchedCards.length === 16) {
         clearInterval(interval);
@@ -183,6 +183,7 @@ function gameOver() {
     };
 }
 
+// Function to restart the game
 function playAgain() {
   $(".modalRestart").click(function() {
       $(".modal").css("display", "none");
@@ -191,10 +192,12 @@ function playAgain() {
     });
 }
 
+// Also function to restart the game
 $(".restart").click(function() {
   location.reload();
 })
 
+// Bind each card of the deck with different functions after click
 cards.each(function() {
   $(this).click(showCard);
   $(this).click(openCard);
