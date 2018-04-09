@@ -39,10 +39,10 @@ h1 {
  */
 
 .deck {
-    width: 660px;
+    width: 45%;
     min-height: 680px;
     background: #f9f9f9;
-    padding: 32px;
+    padding: 2em;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
@@ -81,13 +81,13 @@ h1 {
 }
 
 .deck .card.show {
-    font-size: 33px;
+    font-size: 2.1em;
 }
 
 .deck .card.match {
     cursor: default;
     background: #02ccba;
-    font-size: 33px;
+    font-size: 2.1em;
     -webkit-animation-name: tada;
     animation-name: tada;
     -webkit-animation-duration: 1s;
@@ -118,8 +118,8 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 345px;
-    margin-bottom: 10px;
+    width: 30%;
+    margin-bottom: 1.2em;
     display: flex;
     flex-wrap: wrap;
 }
