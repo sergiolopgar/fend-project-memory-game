@@ -119,6 +119,18 @@ h1 {
     text-align: left;
     width: 345px;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.panel {
+  width: 20%;
+  text-align: center;
+}
+
+.timer {
+  width: 40%;
+  text-align: center;
 }
 
 .score-panel .stars {
@@ -137,6 +149,7 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
 
 .modal {
   display: none;
