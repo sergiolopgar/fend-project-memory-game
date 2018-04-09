@@ -135,8 +135,8 @@ function playsCounter(){
 }
 
 function matchCards(){
-  $(pickedCards[0]).removeClass("show open no-event").addClass("match disabled");
-  $(pickedCards[1]).removeClass("show open no-event").addClass("match disabled");
+  $(pickedCards[0]).removeClass("show open").addClass("match disabled");
+  $(pickedCards[1]).removeClass("show open").addClass("match disabled");
   matchedCards.push(pickedCards[0]);
   matchedCards.push(pickedCards[1]);
   pickedCards = [];
