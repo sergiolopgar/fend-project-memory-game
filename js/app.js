@@ -203,3 +203,24 @@ cards.each(function() {
   $(this).click(openCard);
   $(this).click(gameOver);
 })
+
+// Open dropdown on click
+function myFunction() {
+  $("#myDropdown").toggleClass("show");
+}
+
+// Close the dropdown menu if the clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches(".dropbtn")) {
+
+      let dropdowns = $(".dropdown-content");
+
+      dropdowns.each(function() {
+          let openDropdown = $(this);
+          if (openDropdown.hasClass("show")) {
+            openDropdown.removeClass("show");
+          }
+      });
+
+    }
+}
