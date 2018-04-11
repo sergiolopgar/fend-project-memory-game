@@ -112,7 +112,7 @@ function playsCounter() {
         $(".fa-star:last").css("visibility", "collapse");
 
     } else if (plays > 15) {
-        $(".middle").css("visibility", "collapse");
+        $(".middle-star").css("visibility", "collapse");
       };
 }
 
@@ -189,7 +189,9 @@ function playAgain() {
   $(".modalRestart").click(function() {
       $(".modal").css("display", "none");
       matchedCards = [];
-      location.reload();
+      clicks = [];
+      gameOn();
+      clickOnCards();
     });
 }
 
