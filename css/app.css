@@ -30,8 +30,11 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'coda', sans-serif;
     font-weight: 300;
+    font-size: 3.8em;
+    margin: 0;
+
 }
 
 /*
@@ -40,11 +43,11 @@ h1 {
 
 .deck {
     width: 55%;
-    min-height: 680px;
+    min-height: 640px;
     background-image: url('../img/pool-table.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 5.5em 7em 2em;
+    padding: 5em 7em 1em;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
@@ -136,7 +139,6 @@ h1 {
  */
 
 .score-panel {
-    text-align: left;
     width: 55%;
     margin-bottom: 1.2em;
     display: flex;
@@ -144,7 +146,9 @@ h1 {
 }
 
 .panel {
-  width: 15%;
+  font-family: 'coda', sans-serif;
+  width: 20%;
+  font-size: 1.4em;
   text-align: center;
   padding: 2em auto 0;
   margin-left: auto;
@@ -152,7 +156,7 @@ h1 {
 }
 
 .middle {
-  margin-top: 1.9em;
+  margin-top: 1.5em;
 }
 
 .score-panel .stars {
@@ -173,13 +177,13 @@ h1 {
 
 /* Dropdown Button */
 .dropbtn {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background: url('../img/whiteBall.jpg');
     background-size: contain;
     color: #000;
-    padding: 16px;
-    font-size: 1.2em;
+    padding: 10px;
+    font-size: 1.4em;
     text-align: center;
     border: none;
     cursor: pointer;
@@ -194,6 +198,12 @@ h1 {
 .dropdown {
     position: relative;
     display: inline-block;
+    font-family: 'coda', sans-serif;
+    width: 20%;
+    text-align: center;
+    padding: 2em auto 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Dropdown Content (Hidden by Default) */
