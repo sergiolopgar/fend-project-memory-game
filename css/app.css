@@ -57,7 +57,7 @@ h1 {
 .deck .card {
     height: 120px;
     width: 120px;
-    background: url('../img/ball8.png');
+    background: url('../img/whiteBall.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 0;
