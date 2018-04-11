@@ -19,7 +19,8 @@ let timer = $(".timer");
 timer.html("0mins 0secs");
 var interval;
 
-$(document).ready(gameOn());
+// Start the game with white balls
+$(document).ready(whiteBall);
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -194,15 +195,19 @@ function playAgain() {
 
 // Also function to restart the game
 $(".restart").click(function() {
-  location.reload();
-})
+    clicks = [];
+    gameOn();
+    clickOnCards();
+});
 
 // Bind each card of the deck with different functions after click
-cards.each(function() {
-  $(this).click(showCard);
-  $(this).click(openCard);
-  $(this).click(gameOver);
-})
+function clickOnCards() {
+    cards.each(function() {
+        $(this).click(showCard);
+        $(this).click(openCard);
+        $(this).click(gameOver);
+      });
+}
 
 // Open dropdown on click
 function myFunction() {
@@ -223,4 +228,56 @@ window.onclick = function(event) {
       });
 
     }
+}
+
+// Change cards background depending on click in dropdown
+$(".eightBall-dropdown").click(eightBall);
+$(".stripes-dropdown").click(stripes);
+$(".solids-dropdown").click(solids);
+
+// Change cards and dropdown background to white ball
+function whiteBall() {
+    $(".deck .card").addClass("whiteBall");
+}
+
+// Change cards and dropdown background to eight ball
+function eightBall() {
+    clicks = [];
+    gameOn();
+    clickOnCards();
+
+    $(".dropbtn").css({
+                       "background" : "#000",
+                       "color" : "#fff"
+                    });
+
+    $(".deck .card").addClass("eightBall").removeClass("whiteBall stripes solids").hasClass("whiteBall stripes solids");
+}
+
+// Change cards and dropdown background to stripes balls
+function stripes() {
+    clicks = [];
+    gameOn();
+    clickOnCards();
+
+    $(".dropbtn").css({
+                        "background" : "#632323",
+                        "color" : "#fff"
+                      });
+
+    $(".deck .card").addClass("stripes").removeClass("whiteBall eightBall solids").hasClass("whiteBall eightBall solids");
+}
+
+// Change cards and dropdown background to solids balls
+function solids() {
+    clicks = [];
+    gameOn();
+    clickOnCards();
+
+    $(".dropbtn").css({
+                        "background" : "#632323",
+                        "color" : "#fff"
+                      });
+
+    $(".deck .card").addClass("solids").removeClass("whiteBall eightBall stripes").hasClass("whiteBall eightBall stripes");
 }
