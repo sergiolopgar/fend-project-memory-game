@@ -557,7 +557,7 @@ h1 {
     .deck {
         width: 93%;
         min-height: 550px;
-        padding: 3.2em 5.07em 1em;*/
+        padding: 3.2em 5.07em 1em;
     }
 
     .score-panel {
@@ -636,4 +636,56 @@ h1 {
         width: 57px;
         height: 57px;
     }
+}
+
+@media screen and (max-width: 799px) {
+  .dropbtn {
+      width: 70px;
+      height: 70px;
+      font-size: 1.1em;
+  }
+
+  .panel {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .dropbtn {
+      width: 61px;
+      height: 61px;
+      font-size: 1em;
+  }
+
+  .panel {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dropbtn {
+      width: 50px;
+      height: 50px;
+      font-size: 1em;
+  }
+
+  .panel {
+    font-size: 1em;
+    margin-top: 0.9em;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .dropbtn {
+      width: 40px;
+      height: 40px;
+      font-size: 0.8em;
+      padding: 5px;
+
+  }
+
+  .panel {
+    font-size: 0.8em;
+    margin-top: 0.9em;
+  }
 }
