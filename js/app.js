@@ -162,7 +162,8 @@ function unblockCard() {
 function gameOver() {
     if (matchedCards.length === 16) {
         clearInterval(interval);
-        let timeMade = timer.html();
+
+        let timeMade = minutes + " minutes and " + seconds + " seconds";
         let scoreMade = $(".stars").html();
         $(".modal").css("display", "block");
 
@@ -184,10 +185,6 @@ function gameOver() {
     };
 }
 
-/*$("h1").click(function() {
-  $(".modal").css("display", "block");
-});*/
-
 // Function to restart the game
 function playAgain() {
     $(".modalRestart").click(function() {
@@ -201,23 +198,23 @@ function playAgain() {
 
 // Also function to restart the game
 $(".restart").click(function() {
-    clicks = [];
-    gameOn();
-    clickOnCards();
+      clicks = [];
+      gameOn();
+      clickOnCards();
 });
 
 // Bind each card of the deck with different functions after click
 function clickOnCards() {
-    cards.each(function() {
-        $(this).click(showCard);
-        $(this).click(openCard);
-        $(this).click(gameOver);
-      });
+      cards.each(function() {
+          $(this).click(showCard);
+          $(this).click(openCard);
+          $(this).click(gameOver);
+       });
 }
 
 // Open dropdown on click
 function myFunction() {
-    $("#myDropdown").toggleClass("show");
+      $("#myDropdown").toggleClass("show");
 }
 
 // Close the dropdown menu if the clicks outside of it
