@@ -1,17 +1,25 @@
 # Memory Game Project
 
-## Table of Contents
+## Installation
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* Click here to clone the repo:   https://github.com/sergiolopgar/fend-project-memory-game.git
+* Open index.html file in your favourite web browser.
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+The object of the game is to collect the 8 matching pairs, in the less quantity of moves, and as fast as you can.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Setting up the game
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Click on the small white ball on the left to select which style of billiard ball you prefer.
+
+## Playing Memory
+
+Click on the balls in order to flip them, trying to find the corresponding match.
+
+## Winning the game
+
+When all the cards has been matched, a modal will display with the number of moves, time, and ranking in stars.
 
 ## Contributing
 
