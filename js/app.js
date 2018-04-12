@@ -184,6 +184,10 @@ function gameOver() {
     };
 }
 
+/*$("h1").click(function() {
+  $(".modal").css("display", "block");
+});*/
+
 // Function to restart the game
 function playAgain() {
   $(".modalRestart").click(function() {

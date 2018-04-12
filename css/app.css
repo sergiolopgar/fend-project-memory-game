@@ -42,8 +42,8 @@ h1 {
  */
 
 .deck {
-    width: 55%;
-    min-height: 640px;
+    width: 80%;
+    min-height: 660px;
     background-image: url('../img/pool-table.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -139,7 +139,7 @@ h1 {
  */
 
 .score-panel {
-    width: 55%;
+    width: 75%;
     margin-bottom: 1.2em;
     display: flex;
     flex-wrap: wrap;
@@ -239,7 +239,7 @@ h1 {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: green;
+  background-color: rgba(0, 0, 0, .5);
   -webkit-animation-name: fadeInDownBig;
   animation-name: fadeInDownBig;
   -webkit-animation-duration: 1s;
@@ -252,21 +252,14 @@ h1 {
   position: fixed;
   bottom: 0;
   background-color: #fefefe;
-  width: 80%;
-  height: 80%;
-  margin: 6% 10%;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  height: 20%;
-  background-color: #4286f4;
-}
-
-.modal-body {
-  padding: 2px 16px;
-  height: 70%;
-  background-color: white;
+  width: 72%;
+  height: 74%;
+  margin-bottom: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+  background: url('../img/pool-table-modal.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .modal-footer {
@@ -363,12 +356,12 @@ h1 {
   transform: translate3d(0, 0, 0);
   }
   10%, 30%, 50%, 70%, 90% {
-  -webkit-transform: translate3d(-10px, 0, 0);
-  transform: translate3d(-10px, 0, 0);
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
   }
   20%, 40%, 60%, 80% {
-  -webkit-transform: translate3d(10px, 0, 0);
-  transform: translate3d(10px, 0, 0);
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
   }
   }
   @keyframes shake {
@@ -377,12 +370,12 @@ h1 {
   transform: translate3d(0, 0, 0);
   }
   10%, 30%, 50%, 70%, 90% {
-  -webkit-transform: translate3d(-10px, 0, 0);
-  transform: translate3d(-10px, 0, 0);
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
   }
   20%, 40%, 60%, 80% {
-  -webkit-transform: translate3d(10px, 0, 0);
-  transform: translate3d(10px, 0, 0);
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
   }
   }
 
@@ -430,3 +423,121 @@ h1 {
   transform: scale3d(1, 1, 1);
   }
   }
+
+
+@media screen and (min-width: 1000px) {
+    body {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }
+
+
+@media screen and (min-width: 900px) and (max-width: 999px) {
+    .deck {
+        width: 82%;
+      }
+  }
+
+@media screen and (min-width: 800px) and (max-width: 899px) {
+    .deck {
+        width: 86%;
+        /*padding: 5em 7em 1em;*/
+    }
+
+    .deck .card {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 799px) {
+    .deck {
+        width: 87%;
+        padding: 5em 5.5em 1em;*/
+    }
+
+    .deck .card {
+        width: 104px;
+        height: 104px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+    .deck {
+        width: 89%;
+        min-height: 610px;
+        padding: 3.2em 5.2em 1em;*/
+    }
+
+    .deck .card {
+        width: 91.17px;
+        height: 91.17px;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 599px) {
+    .deck {
+        width: 93%;
+        min-height: 550px;
+        padding: 3.2em 5.07em 1em;*/
+    }
+
+    .deck .card {
+        width: 79px;
+        height: 79px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 539px) {
+    .deck {
+        width: 93%;
+        min-height: 500px;
+        padding: 3.2em 4.55em 1em;
+    }
+
+    .deck .card {
+        width: 71px;
+        height: 71px;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 479px) {
+    .deck {
+        width: 93%;
+        min-height: 440px;
+        padding: 3.2em 4.2em 1em;
+    }
+
+    .deck .card {
+        width: 62.28px;
+        height: 62.28px;
+    }
+}
+
+@media screen and (min-width: 365px) and (max-width: 419px) {
+    .deck {
+        width: 97%;
+        min-height: 420px;
+        padding: 3.2em 3em 1em;
+    }
+
+    .deck .card {
+        width: 62.28px;
+        height: 62.28px;
+    }
+}
+
+@media screen and (min-width: 319px) and (max-width: 364px) {
+    .deck {
+        width: 97%;
+        min-height: 400px;
+        padding: 3.2em 2.3em 1em;
+    }
+
+    .deck .card {
+        width: 57px;
+        height: 57px;
+    }
+}
