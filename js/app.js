@@ -78,29 +78,29 @@ function timerOn() {
 
 // Function to flip the cards and call timerOn to start timer
 let showCard = function() {
-    clicks.push(this);
+      clicks.push(this);
 
-    if (clicks.length === 1){
-        timerOn();
-    };
+      if (clicks.length === 1){
+          timerOn();
+     };
 
-    $(this).toggleClass("open show disabled");
+     $(this).toggleClass("open show disabled");
 }
 
 // Function to determinate wether is a match or not
 function openCard() {
-  pickedCards.push(this);
+    pickedCards.push(this);
 
-  let long = pickedCards.length;
+    let long = pickedCards.length;
 
-  if (long === 2) {
-    playsCounter();
+    if (long === 2) {
+        playsCounter();
     if (pickedCards[0].type === pickedCards[1].type){
-      matchCards();
-    } else {
-      unmatchCards();
-    }
-  }
+        matchCards();
+     } else {
+        unmatchCards();
+     }
+   }
 }
 
 // Function to increase number of plays made and rate according to them
@@ -190,13 +190,13 @@ function gameOver() {
 
 // Function to restart the game
 function playAgain() {
-  $(".modalRestart").click(function() {
-      $(".modal").css("display", "none");
-      matchedCards = [];
-      clicks = [];
-      gameOn();
-      clickOnCards();
-    });
+    $(".modalRestart").click(function() {
+        $(".modal").css("display", "none");
+        matchedCards = [];
+        clicks = [];
+        gameOn();
+        clickOnCards();
+      });
 }
 
 // Also function to restart the game
@@ -217,23 +217,22 @@ function clickOnCards() {
 
 // Open dropdown on click
 function myFunction() {
-  $("#myDropdown").toggleClass("show");
+    $("#myDropdown").toggleClass("show");
 }
 
 // Close the dropdown menu if the clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches(".dropbtn")) {
+    if (!event.target.matches(".dropbtn")) {
 
-      let dropdowns = $(".dropdown-content");
+        let dropdowns = $(".dropdown-content");
 
-      dropdowns.each(function() {
-          let openDropdown = $(this);
-          if (openDropdown.hasClass("show")) {
-            openDropdown.removeClass("show");
-          }
-      });
-
-    }
+        dropdowns.each(function() {
+            let openDropdown = $(this);
+            if (openDropdown.hasClass("show")) {
+                openDropdown.removeClass("show");
+            }
+        });
+     }
 }
 
 // Change cards background depending on click in dropdown

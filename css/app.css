@@ -34,7 +34,6 @@ h1 {
     font-weight: 300;
     font-size: 3.8em;
     margin: 0;
-
 }
 
 /*
@@ -86,6 +85,7 @@ h1 {
 .solids {
     background: url('../img/ball7.png');
 }
+
 .deck .card.open {
     transform: rotateY(0);
     background: #fff;
@@ -131,7 +131,7 @@ h1 {
 }
 
 .deck .card.disabled {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 /*
@@ -146,17 +146,17 @@ h1 {
 }
 
 .panel {
-  font-family: 'coda', sans-serif;
-  width: 20%;
-  font-size: 1.4em;
-  text-align: center;
-  padding: 2em auto 0;
-  margin-left: auto;
-  margin-right: auto;
+    font-family: 'coda', sans-serif;
+    width: 20%;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 2em auto 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .middle {
-  margin-top: 1.5em;
+    margin-top: 1.5em;
 }
 
 .score-panel .stars {
@@ -175,7 +175,9 @@ h1 {
     cursor: pointer;
 }
 
-/* Dropdown Button */
+/*
+ * Styles for dropdown button
+ */
 .dropbtn {
     width: 90px;
     height: 90px;
@@ -191,10 +193,12 @@ h1 {
 }
 
 .dropbtn:focus {
-  outline: none;
+    outline: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/*
+ * Styles for dropdown
+ */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -206,7 +210,6 @@ h1 {
     margin-right: auto;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -216,7 +219,6 @@ h1 {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -224,33 +226,36 @@ h1 {
     display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.dropdown-content a:hover {
+    background-color: #ddd
 }
 
-/* Modal Content/Box */
+.show {
+    display:block;
+}
+
+/*
+ * Style for modal
+ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     text-align: center;
-    width: 70%; /* Could be more or less, depending on screen size */
+    width: 70%;
 }
 
 .modalRestart {
@@ -262,138 +267,172 @@ h1 {
     font-size: 1.3em;
 }
 
+/*
+ * Animation for flipping the cards
+ */
 @-webkit-keyframes flipInX {
-  0% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  opacity: 0;
-  }
-  40% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  }
-  60% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-  opacity: 1;
-  }
-  80% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  }
-  100% {
-  -webkit-transform: perspective(400px);
-  transform: perspective(400px);
-  }
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
 }
-  @keyframes flipInX {
-  0% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  opacity: 0;
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
 }
-  40% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  }
-  60% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-  opacity: 1;
-  }
-  80% {
-  -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  }
-  100% {
-  -webkit-transform: perspective(400px);
-  transform: perspective(400px);
-  }
-  }
 
-  @-webkit-keyframes shake {
-  0%, 100% {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-  -webkit-transform: translate3d(0, -10px, 0);
-  transform: translate3d(0, -10px, 0);
-  }
-  20%, 40%, 60%, 80% {
-  -webkit-transform: translate3d(0, 10px, 0);
-  transform: translate3d(0, 10px, 0);
-  }
-  }
-  @keyframes shake {
-  0%, 100% {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-  -webkit-transform: translate3d(0, -10px, 0);
-  transform: translate3d(0, -10px, 0);
-  }
-  20%, 40%, 60%, 80% {
-  -webkit-transform: translate3d(0, 10px, 0);
-  transform: translate3d(0, 10px, 0);
-  }
-  }
+/*
+ * Animation for unmatch cards
+ */
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
 
-  @-webkit-keyframes tada {
-  0% {
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  }
-  10%, 20% {
-  -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-  transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-  }
-  30%, 50%, 70%, 90% {
-  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-  40%, 60%, 80% {
-  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-  100% {
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  }
-  }
-  @keyframes tada {
-  0% {
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  }
-  10%, 20% {
-  -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-  transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-  }
-  30%, 50%, 70%, 90% {
-  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-  40%, 60%, 80% {
-  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-  100% {
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  }
-  }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
 
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+}
 
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+}
+
+/*
+ * Animation for match cards
+ */
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/*
+ * Media querys for modals
+ */
 @media screen and (min-width: 1000px) {
     body {
         width: 1000px;
@@ -402,99 +441,101 @@ h1 {
       }
 
     .modal-title {
-      font-size: 3em;
-      margin-top: 0.5em;
-      margin-bottom: 0;
+        font-size: 3em;
+        margin-top: 0.5em;
+        margin-bottom: 0;
     }
 
     .modal-message {
-      font-size: 1.6em;
-      margin-top: 0.3em;
-      margin-bottom: 0;
+        font-size: 1.6em;
+        margin-top: 0.3em;
+        margin-bottom: 0;
     }
 
     .modal-info {
-      font-size: 1.4em;
-      margin-top: 1em;
+        font-size: 1.4em;
+        margin-top: 1em;
     }
 
     .modalRestart {
         font-size: 1.2em;
     }
-  }
+}
 
 @media screen and (min-width: 600px) and (max-width: 999px) {
-  .modal-title {
-    font-size: 2.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0;
-  }
+    .modal-title {
+        font-size: 2.5em;
+        margin-top: 0.5em;
+        margin-bottom: 0;
+    }
 
-  .modal-message {
-    font-size: 1.4em;
-    margin-top: 0.3em;
-    margin-bottom: 0;
-  }
+    .modal-message {
+        font-size: 1.4em;
+        margin-top: 0.3em;
+        margin-bottom: 0;
+    }
 
-  .modal-info {
-    font-size: 1.2em;
-    margin-top: 1em;
-  }
+    .modal-info {
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
 
-  .modalRestart {
-      font-size: 1.1em;
-  }
+    .modalRestart {
+        font-size: 1.1em;
+    }
 }
 
 @media screen and (max-width: 599px) {
-  .modal-title {
-    font-size: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0;
-  }
+    .modal-title {
+        font-size: 2em;
+        margin-top: 0.5em;
+        margin-bottom: 0;
+    }
 
-  .modal-message {
-    font-size: 1.2em;
-    margin-top: 0.3em;
-    margin-bottom: 0;
-  }
+    .modal-message {
+        font-size: 1.2em;
+        margin-top: 0.3em;
+        margin-bottom: 0;
+    }
 
-  .modal-info {
-    font-size: 1em;
-    margin-top: 1em;
-  }
+    .modal-info {
+        font-size: 1em;
+        margin-top: 1em;
+    }
 
-  .modalRestart {
-      font-size: 0.9em;
-      width: 130px;
-      height: 40px;
-  }
+    .modalRestart {
+        font-size: 0.9em;
+        width: 130px;
+        height: 40px;
+    }
 }
 
 @media screen and (max-width: 450px) {
-  .modal-title {
-    font-size: 1.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0;
-  }
+    .modal-title {
+        font-size: 1.5em;
+        margin-top: 0.5em;
+        margin-bottom: 0;
+    }
 
-  .modal-message {
-    font-size: 1em;
-    margin-top: 0.3em;
-    margin-bottom: 0;
-  }
+    .modal-message {
+        font-size: 1em;
+        margin-top: 0.3em;
+        margin-bottom: 0;
+    }
 
-  .modal-info {
-    font-size: 0.8em;
-    margin-top: 1em;
-  }
+    .modal-info {
+        font-size: 0.8em;
+        margin-top: 1em;
+    }
 
-  .modalRestart {
-      font-size: 0.7em;
-  }
+    .modalRestart {
+        font-size: 0.7em;
+    }
 }
 
-
+/*
+ * Media querys for deck
+ */
 @media screen and (min-width: 900px) and (max-width: 999px) {
     .deck {
         width: 82%;
@@ -638,70 +679,72 @@ h1 {
     }
 }
 
+/*
+ * Media querys for score panel
+ */
 @media screen and (max-width: 799px) {
     h1 {
         font-size: 3.5em;
     }
 
-  .dropbtn {
-      width: 70px;
-      height: 70px;
-      font-size: 1.1em;
-  }
+    .dropbtn {
+        width: 70px;
+        height: 70px;
+        font-size: 1.1em;
+    }
 
-  .panel {
-    font-size: 1.1em;
-  }
+    .panel {
+        font-size: 1.1em;
+    }
 }
 
 @media screen and (max-width: 599px) {
-  h1 {
-      font-size: 3em;
-  }
+    h1 {
+        font-size: 3em;
+    }
 
-  .dropbtn {
-      width: 61px;
-      height: 61px;
-      font-size: 1em;
-  }
+    .dropbtn {
+        width: 61px;
+        height: 61px;
+        font-size: 1em;
+    }
 
-  .panel {
-    font-size: 1em;
-  }
+    .panel {
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  h1 {
-      font-size: 2.7em;
-  }
+    h1 {
+        font-size: 2.7em;
+    }
 
-  .dropbtn {
-      width: 50px;
-      height: 50px;
-      font-size: 1em;
-  }
+    .dropbtn {
+        width: 50px;
+        height: 50px;
+        font-size: 1em;
+    }
 
-  .panel {
-    font-size: 1em;
-    margin-top: 0.9em;
-  }
+    .panel {
+        font-size: 1em;
+        margin-top: 0.9em;
+    }
 }
 
 @media screen and (max-width: 429px) {
-  h1 {
-      font-size: 2.2em;
-  }
+    h1 {
+        font-size: 2.2em;
+    }
 
-  .dropbtn {
-      width: 40px;
-      height: 40px;
-      font-size: 0.8em;
-      padding: 5px;
+    .dropbtn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8em;
+        padding: 5px;
+    }
 
-  }
-
-  .panel {
-    font-size: 0.8em;
-    margin-top: 0.9em;
-  }
+    .panel {
+        font-size: 0.8em;
+        margin-top: 0.9em;
+    }
 }
