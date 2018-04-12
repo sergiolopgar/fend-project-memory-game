@@ -498,11 +498,19 @@ h1 {
 @media screen and (min-width: 900px) and (max-width: 999px) {
     .deck {
         width: 82%;
-      }
-  }
+    }
+
+    .score-panel {
+        width: 82%;
+    }
+}
 
 @media screen and (min-width: 800px) and (max-width: 899px) {
     .deck {
+        width: 86%;
+    }
+
+    .score-panel {
         width: 86%;
     }
 
@@ -518,6 +526,10 @@ h1 {
         padding: 5em 5.5em 1em;*/
     }
 
+    .score-panel {
+        width: 87%;
+    }
+
     .deck .card {
         width: 104px;
         height: 104px;
@@ -529,6 +541,10 @@ h1 {
         width: 89%;
         min-height: 610px;
         padding: 3.2em 5.2em 1em;*/
+    }
+
+    .score-panel {
+        width: 89%;
     }
 
     .deck .card {
@@ -544,6 +560,10 @@ h1 {
         padding: 3.2em 5.07em 1em;*/
     }
 
+    .score-panel {
+        width: 93%;
+    }
+
     .deck .card {
         width: 79px;
         height: 79px;
@@ -555,6 +575,10 @@ h1 {
         width: 93%;
         min-height: 500px;
         padding: 3.2em 4.55em 1em;
+    }
+
+    .score-panel {
+        width: 93%;
     }
 
     .deck .card {
@@ -570,6 +594,10 @@ h1 {
         padding: 3.2em 4.2em 1em;
     }
 
+    .score-panel {
+        width: 93%;
+    }
+
     .deck .card {
         width: 62.28px;
         height: 62.28px;
@@ -583,6 +611,10 @@ h1 {
         padding: 3.2em 3em 1em;
     }
 
+    .score-panel {
+        width: 97%;
+    }
+
     .deck .card {
         width: 62.28px;
         height: 62.28px;
@@ -594,6 +626,10 @@ h1 {
         width: 97%;
         min-height: 400px;
         padding: 3.2em 2.3em 1em;
+    }
+
+    .score-panel {
+        width: 97%;
     }
 
     .deck .card {
