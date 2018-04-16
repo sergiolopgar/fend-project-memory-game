@@ -21,6 +21,12 @@ Click on the balls in order to flip them, trying to find the corresponding match
 
 When all the cards has been matched, a modal will display with the number of moves, time, and ranking in stars.
 
+## Built With
+
+* [Bootstrap](https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css) - The web framework used
+* [Google Fonts](https://fonts.googleapis.com/css?family=Coda) - Font family used
+* [jquery](https://jquery.com/)
+
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
