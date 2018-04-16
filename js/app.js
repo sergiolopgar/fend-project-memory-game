@@ -199,6 +199,8 @@ function playAgain() {
 // Also function to restart the game
 $(".restart").click(function() {
       clicks = [];
+      pickedCards = [];
+      matchedCards = [];
       gameOn();
       clickOnCards();
 });
